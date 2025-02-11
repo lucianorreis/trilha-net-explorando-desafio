@@ -41,12 +41,11 @@ namespace DesafioProjetoHospedagem.Models
         {
             //* Retorna o valor da diária
             decimal valor = DiasReservados * Suite.ValorDiaria;
-            int valorDiaria = Convert.ToInt32(Suite.ValorDiaria);
             
             // Regra: Caso os dias reservados forem maior ou igual a 10, conceder um desconto de 10%
             if (DiasReservados >= 10)
             {
-                valor = valorDiaria - (valorDiaria /100);
+                valor = valor - (valor /10);
             }
 
             return valor;
